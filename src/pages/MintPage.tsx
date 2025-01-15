@@ -1,0 +1,96 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Wallet, Plus, Minus } from 'lucide-react';
+
+const MintPage = () => {
+  const [quantity, setQuantity] = React.useState(1);
+  const price = 1; // SOL
+
+  return (
+    <div className="pt-24 px-4 container mx-auto min-h-screen max-w-4xl">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-12"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-teal-400 to-orange-400 bg-clip-text text-transparent">
+          Mint Your Bamboo Club NFT
+        </h1>
+        <p className="text-xl text-gray-300">
+          Join the exclusive club and unlock amazing benefits
+        </p>
+      </motion.div>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="glass card-gradient p-6 rounded-xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80"
+            alt="NFT Preview"
+            className="w-full h-64 object-cover rounded-lg mb-6"
+          />
+          <div className="space-y-4">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Price per NFT</span>
+              <span className="font-bold">{price} SOL</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Total</span>
+              <span className="font-bold">{price * quantity} SOL</span>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="glass card-gradient p-6 rounded-xl space-y-6"
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-xl font-bold">Quantity</span>
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                className="btn-gradient-secondary p-2 rounded-lg"
+              >
+                <Minus className="w-5 h-5" />
+              </button>
+              <span className="text-xl font-bold">{quantity}</span>
+              <button
+                onClick={() => setQuantity(quantity + 1)}
+                className="btn-gradient-secondary p-2 rounded-lg"
+              >
+                <Plus className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <button className="w-full btn-connect px-8 py-4 rounded-lg flex items-center justify-center space-x-2">
+              <Wallet className="w-5 h-5" />
+              <span>Connect Wallet</span>
+            </button>
+            <button className="w-full btn-gradient-primary px-8 py-4 rounded-lg flex items-center justify-center space-x-2" disabled>
+              Mint NFT
+            </button>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-bold text-lg">Minting Benefits</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-300">
+              <li>Mint 1: 50% off merchandise + free shipping for life</li>
+              <li>Mint 3: Free exclusive T-shirt</li>
+              <li>Mint 5: $500 USDC prize for mint sellout</li>
+              <li>Mint 7: $1000 USDC prize for mint sellout</li>
+            </ul>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default MintPage;
