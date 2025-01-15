@@ -1,6 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, MessageSquare, Instagram, Github, Leaf } from 'lucide-react';
+import { Twitter, MessageSquare, Instagram, Github } from 'lucide-react';
+import LOGO from "../assets/logo.png"
+
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Leaf className="h-8 w-8 text-green-400" />
+              <img src={LOGO} alt="The Bamboo Club NFT" />
               <span className="text-xl font-bold">The Bamboo Club</span>
             </div>
             <p className="text-gray-400">
