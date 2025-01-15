@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Wallet, Plus, Minus } from 'lucide-react';
+import MYTHIC from "../assets/gifs/surare.gif";
+
 
 const MintPage = () => {
   const [quantity, setQuantity] = React.useState(1);
-  const price = 1; // SOL
+  const price = 0.30; // SOL
 
   return (
     <div className="pt-24 px-4 container mx-auto min-h-screen max-w-4xl">
@@ -28,7 +30,7 @@ const MintPage = () => {
           className="glass card-gradient p-6 rounded-xl"
         >
           <img
-            src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80"
+            src={MYTHIC}
             alt="NFT Preview"
             className="w-full h-64 object-cover rounded-lg mb-6"
           />
