@@ -7,13 +7,11 @@ import GatedContent from './pages/GatedContent';
 import ClaimReward from './pages/ClaimReward';
 import MintPage from './pages/MintPage';
 import DressingRoom from './pages/DressingRoom';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
 
     <Router>
-      <SpeedInsights />
       <div className="min-h-screen text-white relative">
         {/* Parallax Background */}
         <div className="parallax-bg" />
