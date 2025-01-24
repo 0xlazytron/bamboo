@@ -16,7 +16,7 @@ const nftCards = [
     gif: SURARE,
   },
   {
-    title: "Bamboo Mythic Rare",
+    title: " Mythic Rare",
     gif: MYTHIC,
   }
 ];
@@ -130,15 +130,20 @@ const Hero = () => {
               <span>NFT Drop</span>
             </motion.button>
 
-            <motion.button
+           <a  
+            href="https://google.com"
+      target="_blank" className="  ">
+
+           <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/dressing-room')}
+             
               className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
             >
               <ShoppingBag className="h-6 w-6" />
               <span>The Dressing Room</span>
             </motion.button>
+           </a>
           </div>
         </motion.div>
 

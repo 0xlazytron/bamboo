@@ -32,9 +32,11 @@ const Navbar = () => {
             <Link to="/nft-drop" className="hover:text-purple-400 transition-colors">
               NFT Drop
             </Link>
-            <Link to="/dressing-room" className="hover:text-purple-400 transition-colors">
+            <a     
+            href="https://google.com"
+      target="_blank" className="  ">
               Dressing Room
-            </Link>
+            </a>
             <div className="flex items-center space-x-4 mr-6">
               <a href="#" className="hover:text-purple-400 transition-colors">
                 <Twitter className="h-5 w-5" />

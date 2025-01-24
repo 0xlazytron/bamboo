@@ -52,7 +52,7 @@ const NFTDropPage = () => {
 
   return (
     <div className="pt-24 min-h-screen items-center">
-      <InfiniteTicker items={tickerItems} />
+      
 
       <div className="container mx-auto px-4 py-12 ">
         <motion.div

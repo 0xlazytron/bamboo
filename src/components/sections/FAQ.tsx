@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import sol from "../../assets/sol.jpeg"
+import m from "../../assets/m.jpeg"
+import opensea from "../../assets/opensea.jpeg"
+
+
 
 const faqs = [
   {
@@ -67,6 +72,15 @@ const FAQ = () => {
           ))}
         </div>
       </motion.div>
+
+      <div className="flex pt-20  flex-col items-center justify-center gap-5">
+<p className="text-4xl font-bold text-center bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">Partners</p>
+<div className="flex items-center flex-col lg:flex-row gap-4 justify-center">
+  <img src={opensea} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
+  <img src={sol} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
+  <img src={m} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
+</div>
+      </div>
     </div>
   );
 };
