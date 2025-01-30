@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import shirt from "../../assets/shirt.jpeg.jpg";
 import usd from "../../assets/usd.png";
 import { Link, useNavigate } from "react-router-dom";
-import { Wallet, Gift } from "lucide-react";
+import { Wallet, Gift,ShoppingBag } from "lucide-react";
+
 
 
 const Features = () => {
@@ -100,15 +101,20 @@ const Features = () => {
         </motion.button>
 
         {/* NFT Holders Portal Button */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => navigate("/gated-content")}
-          className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
-        >
-          <Gift className="h-6 w-6" />
-          <span>NFT Holders Portal</span>
-        </motion.button>
+        <a
+                     href="https://google.com"
+                     target="_blank" className="  ">
+       
+                     <motion.button
+                       whileHover={{ scale: 1.05 }}
+                       whileTap={{ scale: 0.95 }}
+       
+                       className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
+                     >
+                       <ShoppingBag className="h-6 w-6" />
+                       <span>The Dressing Room</span>
+                     </motion.button>
+                   </a>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -118,8 +124,12 @@ const Features = () => {
           <Gift className="h-6 w-6" />
           <span>NFT HOLDERS ENTER
           </span>
+
+
+
         </motion.button>
       </div>
+      
     </div>
   );
 };

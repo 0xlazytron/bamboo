@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Sparkles, ShoppingBag } from 'lucide-react';
 import RARE from "../../assets/gifs/rare.gif";
 import SURARE from "../../assets/gifs/surare.gif";
 import MYTHIC from "../../assets/gifs/mythic.gif";
@@ -110,16 +109,16 @@ const Hero = () => {
           <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-teal-400 to-orange-400 bg-clip-text text-transparent leading-tight">
             Welcome to The Bamboo Club
           </h1>
-          <div className="space-y-6 text-xl text-gray-300">
+          {/* <div className="space-y-6 text-xl text-gray-300">
             <p>
               Step into a world where digital art meets exclusive rewards. The Bamboo Club is more than just an NFT collection - it's a gateway to a thriving community of collectors, creators, and innovators.
             </p>
             <p>
               Own unique digital masterpieces, unlock premium merchandise, and join an elite group of Web3 enthusiasts shaping the future of digital collectibles.
             </p>
-          </div>
+          </div> */}
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* <div className="flex flex-col sm:flex-row gap-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -130,21 +129,21 @@ const Hero = () => {
               <span>NFT Drop</span>
             </motion.button>
 
-           <a  
-            href="https://google.com"
-      target="_blank" className="  ">
+            // <a
+            //   href="https://google.com"
+            //   target="_blank" className="  ">
 
-           <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-             
-              className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
-            >
-              <ShoppingBag className="h-6 w-6" />
-              <span>The Dressing Room</span>
-            </motion.button>
-           </a>
-          </div>
+            //   <motion.button
+            //     whileHover={{ scale: 1.05 }}
+            //     whileTap={{ scale: 0.95 }}
+
+            //     className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
+            //   >
+            //     <ShoppingBag className="h-6 w-6" />
+            //     <span>The Dressing Room</span>
+            //   </motion.button>
+            // </a>
+          </div> */}
         </motion.div>
 
         <motion.div
