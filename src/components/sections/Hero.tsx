@@ -121,34 +121,6 @@ const Hero = () => {
               Own unique digital masterpieces, unlock premium merchandise, and join an elite group of Web3 enthusiasts shaping the future of digital collectibles.
             </p>
           </div>
-
-       {/* <div className="flex flex-col sm:flex-row gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/nft-drop')}
-              className="btn-gradient-primary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
-            >
-              <Sparkles className="h-6 w-6" />
-              <span>NFT Drop</span>
-            </motion.button>
-
-            <a
-              href="https://google.com"
-              target="_blank" className=" btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg ">
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-
-                className="flex gap-2"
-              >
-                <ShoppingBag className="h-6 w-6" />
-                <span>The Dressing Room</span>
-              </motion.button>
-            </a>
-          </div>  */}
-      
         </motion.div>
 
         <motion.div
