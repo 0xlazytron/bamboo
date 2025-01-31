@@ -1,12 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Wallet, Plus, Minus } from 'lucide-react';
+import { Wallet} from 'lucide-react';
 import MYTHIC from "../assets/gifs/surare.gif";
 
 
 const MintPage = () => {
-  const [quantity, setQuantity] = React.useState(1);
-  const price = 0.30; // SOL
+ 
+  // const price = 0.30; // SOL
 
   return (
     <div className="pt-24 px-4 container mx-auto min-h-screen max-w-4xl">
@@ -34,7 +33,7 @@ const MintPage = () => {
             alt="NFT Preview"
             className="w-full h-64 object-cover rounded-lg mb-6"
           />
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <div className="flex justify-between items-center">
               <span className="text-gray-300">Price per NFT</span>
               <span className="font-bold">{price} SOL</span>
@@ -43,7 +42,7 @@ const MintPage = () => {
               <span className="text-gray-300">Total</span>
               <span className="font-bold">{price * quantity} SOL</span>
             </div>
-          </div>
+          </div> */}
         </motion.div>
 
         <motion.div
@@ -51,24 +50,12 @@ const MintPage = () => {
           animate={{ opacity: 1, x: 0 }}
           className="glass card-gradient p-6 rounded-xl space-y-6"
         >
-          <div className="flex items-center justify-between">
-            <span className="text-xl font-bold">Quantity</span>
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="btn-gradient-secondary p-2 rounded-lg"
-              >
-                <Minus className="w-5 h-5" />
-              </button>
-              <span className="text-xl font-bold">{quantity}</span>
-              <button
-                onClick={() => setQuantity(quantity + 1)}
-                className="btn-gradient-secondary p-2 rounded-lg"
-              >
-                <Plus className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
+      
+  <div className="absolute top-3  left-6 z-10 flex items-center space-x-2 bg-emerald-500/20 backdrop-blur-sm px-3 py-1 rounded-full border border-emerald-500/50">
+    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+    <span className="text-emerald-500 font-semibold text-sm">LIVE</span>
+  </div>
+
 
           <div className="space-y-4">
             <button className="w-full btn-connect px-8 py-4 rounded-lg flex items-center justify-center space-x-2">

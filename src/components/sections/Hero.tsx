@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+
+
 import RARE from "../../assets/gifs/rare.gif";
 import SURARE from "../../assets/gifs/surare.gif";
 import MYTHIC from "../../assets/gifs/mythic.gif";
+
 
 const nftCards = [
   {
@@ -23,13 +26,13 @@ const nftCards = [
 const LiveTag = () => (
   <div className="absolute top-4 left-4 z-10 flex items-center space-x-2 bg-emerald-500/20 backdrop-blur-sm px-3 py-1 rounded-full border border-emerald-500/50">
     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-    <span className="text-emerald-500 font-semibold text-sm">LIVE</span>
+    <span className="text-emerald-500 font-semibold text-xs md:text-sm">LIVE</span>
   </div>
 );
 
 const SolanaIcon = () => (
   <div className="absolute top-4 right-4 z-10">
-    <div className="glass p-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+    <div className="glass p-1 md:p-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
@@ -41,6 +44,7 @@ const SolanaIcon = () => (
         viewBox="0 0 200 200"
         style={{ background: "new 0 0 40 40" }}
         xmlSpace="preserve"
+        className='w-4 md:w-full md:h-full h-4'
       >
         <defs>
           <linearGradient id="b" x1="100" x2="100" y1="200" gradientUnits="userSpaceOnUse">
@@ -99,26 +103,26 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen flex items-center px-4 container mx-auto">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full mt-20">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="lg:w-[45%] space-y-8"
         >
-          <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-teal-400 to-orange-400 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-5xl lg:text-7xl font-bold md:block hidden  bg-gradient-to-r from-purple-400 via-teal-400 to-orange-400 bg-clip-text text-transparent leading-tight">
             Welcome to The Bamboo Club
           </h1>
-          {/* <div className="space-y-6 text-xl text-gray-300">
+          <div className="space-y-6 text-xl text-gray-300 md:block hidden">
             <p>
               Step into a world where digital art meets exclusive rewards. The Bamboo Club is more than just an NFT collection - it's a gateway to a thriving community of collectors, creators, and innovators.
             </p>
             <p>
               Own unique digital masterpieces, unlock premium merchandise, and join an elite group of Web3 enthusiasts shaping the future of digital collectibles.
             </p>
-          </div> */}
+          </div>
 
-          {/* <div className="flex flex-col sm:flex-row gap-4">
+       {/* <div className="flex flex-col sm:flex-row gap-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -129,21 +133,22 @@ const Hero = () => {
               <span>NFT Drop</span>
             </motion.button>
 
-            // <a
-            //   href="https://google.com"
-            //   target="_blank" className="  ">
+            <a
+              href="https://google.com"
+              target="_blank" className=" btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg ">
 
-            //   <motion.button
-            //     whileHover={{ scale: 1.05 }}
-            //     whileTap={{ scale: 0.95 }}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
 
-            //     className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
-            //   >
-            //     <ShoppingBag className="h-6 w-6" />
-            //     <span>The Dressing Room</span>
-            //   </motion.button>
-            // </a>
-          </div> */}
+                className="flex gap-2"
+              >
+                <ShoppingBag className="h-6 w-6" />
+                <span>The Dressing Room</span>
+              </motion.button>
+            </a>
+          </div>  */}
+      
         </motion.div>
 
         <motion.div
@@ -158,7 +163,7 @@ const Hero = () => {
                 onClick={() => navigate('/mint')}
                 onHoverStart={() => setHoveredCard(index)}
                 onHoverEnd={() => setHoveredCard(null)}
-                className="absolute w-[296px] sm:w-[400px] aspect-[3/4] glass card-gradient rounded-2xl overflow-hidden border-[10px] cursor-pointer shadow-xl"
+                className="absolute h-72 w-32 md:h-[500px] md:w-[245px]  glass card-gradient rounded-2xl overflow-hidden border-[10px] cursor-pointer shadow-xl"
                 initial={{
                   x: `${(index - 1) * 60}px`,
                   rotate: (index - 1) * 15,
@@ -201,13 +206,13 @@ const Hero = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                    <h3 className="text-2xl font-bold text-white">{card.title}</h3>
+                    <h3 className="md:text-2xl text-base font-bold text-white">{card.title}</h3>
                   </div>
                   <motion.div
                     className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0"
                     whileHover={{ opacity: 1 }}
                   >
-                    <span className="text-white text-lg font-bold">Click to Mint</span>
+                    <span className="text-white text-sm md:text-lg font-bold">Click to Mint</span>
                   </motion.div>
                 </motion.div>
               </motion.div>

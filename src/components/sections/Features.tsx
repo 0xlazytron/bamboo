@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import shirt from "../../assets/shirt.jpeg.jpg";
-import usd from "../../assets/usd.png";
-import { Link, useNavigate } from "react-router-dom";
-import { Wallet, Gift,ShoppingBag } from "lucide-react";
-
+import usd from "../../assets/logo.png";
+import { useNavigate } from "react-router-dom";
+import { Wallet, Gift,  } from "lucide-react";
+import sol from "../../assets/sol.jpeg"
+import m from "../../assets/m.jpeg"
+import opensea from "../../assets/opensea.jpeg"
 
 
 const Features = () => {
@@ -43,7 +45,7 @@ const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="glass card-gradient flex items-center justify-center h-[350px] w-[220px] gap-2 flex-col p-6 rounded-xl text-center"
+            className="glass card-gradient flex items-center justify-center w-[90%] md:h-[390px] md:w-[260px] gap-2 flex-col p-6 rounded-xl text-center"
           >
             <img src={shirt} alt="Bitcoin T-Shirt" className="h-[200px] rounded-lg" />
             <p className="text-gray-300">
@@ -56,13 +58,13 @@ const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="glass card-gradient flex items-center justify-center h-[350px] w-[220px] gap-2 flex-col p-6 rounded-xl text-center"
+            className="glass card-gradient flex items-center justify-center w-[90%] md:h-[390px] md:w-[260px] gap-2 flex-col p-6 rounded-xl text-center"
           >
             <img src={usd} alt="USDC Giveaway" className="h-[200px] rounded-lg" />
             <p className="text-gray-300">
               <button
                 onClick={() => handleScrollToTop("/nft-drop")}
-                className="hover:text-purple-400 transition-colors text-center py-2 text-left"
+                className="hover:text-purple-400 transition-colors text-center py-2 "
               >
                 $1000 USDC GIVEAWAY - Click for details!
               </button>
@@ -102,19 +104,23 @@ const Features = () => {
 
         {/* NFT Holders Portal Button */}
         <a
-                     href="https://google.com"
-                     target="_blank" className="  ">
-       
-                     <motion.button
-                       whileHover={{ scale: 1.05 }}
-                       whileTap={{ scale: 0.95 }}
-       
-                       className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
-                     >
-                       <ShoppingBag className="h-6 w-6" />
-                       <span>The Dressing Room</span>
-                     </motion.button>
-                   </a>
+          href="https://google.com"
+          target="_blank" className=" btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg ">
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/gated-content")}
+            className=" flex  gap-2"
+          >
+            <Gift className="h-6 w-6" />
+            <span>The Dressing Room
+            </span>
+
+
+
+          </motion.button>
+        </a>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -129,7 +135,15 @@ const Features = () => {
 
         </motion.button>
       </div>
-      
+      <div className="flex pt-20  flex-col items-center justify-center gap-5">
+<p className="text-4xl font-bold text-center bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">Partners</p>
+<div className="flex items-center flex-col lg:flex-row gap-4 justify-center">
+  <img src={m} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
+  <img src={sol} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
+  <img src={opensea} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
+</div>
+      </div>
+
     </div>
   );
 };
