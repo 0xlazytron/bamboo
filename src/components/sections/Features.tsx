@@ -39,7 +39,7 @@ const Features = () => {
           Why Join The Bamboo Club?
         </h2>
 
-        <div className="flex items-center flex-col md:flex-row justify-center gap-8">
+        <div className="flex items-center  flex-col md:flex-row justify-center gap-8">
           {/* First Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
