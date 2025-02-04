@@ -17,10 +17,7 @@ const MintPage = () => {
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-teal-400 to-orange-400 bg-clip-text text-transparent">
           Mint Your Bamboo Club NFT
         </h1>
-        <p className="text-xl text-gray-300">
-          Join the exclusive club and unlock amazing benefits
-        </p>
-      </motion.div>
+        </motion.div>
 
       <div className="grid md:grid-cols-2 gap-8 ">
         <motion.div
