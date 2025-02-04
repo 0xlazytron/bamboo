@@ -23,8 +23,8 @@ const Hero = () => {
     }
   }, [selectedCard]);
   return (
-    <div className="min-h-screen flex items-center px-4 container mx-auto ">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full mt-4 md:mt-20">
+    <div className=" flex items-center px-4 container mx-auto ">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full mt-8 md:mt-20">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
