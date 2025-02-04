@@ -135,7 +135,7 @@ const Hero = () => {
                 onClick={() => navigate('/mint')}
                 onHoverStart={() => setHoveredCard(index)}
                 onHoverEnd={() => setHoveredCard(null)}
-                className="absolute h-72 w-32 md:h-[500px] md:w-[245px]  glass card-gradient rounded-2xl overflow-hidden border-[10px] cursor-pointer shadow-xl"
+                className="absolute h-72 w-40 md:h-[500px] md:w-[245px]  glass card-gradient rounded-2xl overflow-hidden border-[10px] cursor-pointer shadow-xl"
                 initial={{
                   x: `${(index - 1) * 60}px`,
                   rotate: (index - 1) * 15,

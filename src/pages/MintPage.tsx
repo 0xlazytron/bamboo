@@ -22,18 +22,18 @@ const MintPage = () => {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 ">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="glass card-gradient p-6 rounded-xl"
+          className="glass card-gradient p-6 rounded-xl md:block hidden"
         >
           <img
             src={MYTHIC}
             alt="NFT Preview"
-            className="w-full h-64 object-cover rounded-lg mb-6"
+            className="w-fit mx-auto h-72 md:h-full  object-cover rounded-lg "
           />
-       
+      
         </motion.div>
 
         <motion.div
@@ -68,6 +68,19 @@ const MintPage = () => {
             </ul>
           </div>
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="glass card-gradient p-6 rounded-xl md:hidden block "
+        >
+          <img
+            src={MYTHIC}
+            alt="NFT Preview"
+            className="w-fit mx-auto h-72 md:h-full  object-cover rounded-lg "
+          />
+      
+        </motion.div>
+
       </div>
     </div>
   );
