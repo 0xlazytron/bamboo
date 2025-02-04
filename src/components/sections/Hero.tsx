@@ -77,7 +77,7 @@ const Hero = () => {
           <div className=" p-6 rounded-lg max-w-lg relative">
             <button
               onClick={() => setSelectedCard(null)}
-              className="absolute sm:-top-20 md:-top-8  md:-right-24  text-white p-2 rounded-full"
+              className="absolute -top-20 md:-top-8  md:-right-24  text-white p-2 rounded-full"
             >
               ✕
             </button>
