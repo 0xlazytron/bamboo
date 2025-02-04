@@ -34,7 +34,7 @@ const Hero = () => {
           <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-teal-400 to-orange-400 bg-clip-text text-transparent">
             Welcome to The Bamboo Club
           </h1>
-          <div className="space-y-6 text-xl text-gray-300">
+          <div className="space-y-6 text-xl text-gray-300 md:block hidden">
             <p>
               Step into a world where digital art meets exclusive rewards. The Bamboo Club is more than just an NFT collection - it's a gateway to a thriving community of collectors, creators, and innovators.
             </p>
