@@ -62,6 +62,9 @@
 .glass {
   @apply bg-white/10 backdrop-blur-lg border border-white/20;
 }
+.glass2 {
+  @apply bg-white/10 backdrop-blur-3xl;
+}
 
 /* Card Styles */
 .card-gradient {
@@ -83,6 +86,7 @@
   will-change: transform;
 }
 
+
 .parallax-overlay {
   @apply fixed inset-0 -z-10;
   background: linear-gradient(
@@ -92,6 +96,8 @@
     rgba(67, 56, 202, 0.7)
   );
 }
+
+
 
 .animated-grid {
   @apply fixed inset-0 -z-10 opacity-20;
@@ -104,10 +110,7 @@
   animation: gridMove 15s linear infinite;
 }
 
-/* Team member card hover effect */
-.team-member-card:hover .member-overlay {
-  opacity: 1;
-}
+
 
 .member-overlay {
   @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 transition-opacity duration-300;
@@ -142,18 +145,3 @@
   animation: floating 3s ease-in-out infinite;
 }
 
-/* Roadmap line gradient animation */
-.roadmap-line {
-  background: linear-gradient(to bottom, #9333ea, #2dd4bf, #f97316);
-  background-size: 200% 200%;
-  animation: gradientFlow 6s linear infinite;
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 200%;
-  }
-}
