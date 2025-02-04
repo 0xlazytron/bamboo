@@ -33,16 +33,7 @@ const MintPage = () => {
             alt="NFT Preview"
             className="w-full h-64 object-cover rounded-lg mb-6"
           />
-          {/* <div className="space-y-4">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-300">Price per NFT</span>
-              <span className="font-bold">{price} SOL</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-300">Total</span>
-              <span className="font-bold">{price * quantity} SOL</span>
-            </div>
-          </div> */}
+       
         </motion.div>
 
         <motion.div
