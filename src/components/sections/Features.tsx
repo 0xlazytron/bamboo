@@ -66,7 +66,7 @@ const Features = () => {
                 onClick={() => handleScrollToTop("/nft-drop")}
                 className="hover:text-purple-400 transition-colors text-center py-2 "
               >
-                $1000 USDC GIVEAWAY - Click for details!
+               NFT Mint Details
               </button>
             </p>
           </motion.div>
@@ -136,11 +136,11 @@ const Features = () => {
         </motion.button>
       </div>
       <div className="flex pt-20  flex-col items-center justify-center gap-5">
-<p className="text-4xl font-bold text-center bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">Partners</p>
-<div className="flex items-center flex-col lg:flex-row gap-4 justify-center">
-  <img src={m} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
-  <img src={sol} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
-  <img src={opensea} alt="" className=" rounded-xl w-[300px] transition-all hover:scale-105 h-[200px] duration-300" />
+
+<div className="flex items-center  lg:flex-row gap-4 justify-center">
+  <img src={m} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
+  <img src={sol} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
+  <img src={opensea} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
 </div>
       </div>
 
