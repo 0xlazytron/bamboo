@@ -29,7 +29,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Resources
           <div>
             <h3 className="font-bold text-lg mb-4">Resources</h3>
             <ul className="space-y-2">
@@ -37,7 +37,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Social Links */}
           <div>
