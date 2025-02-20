@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import shirt from "../../assets/shirt.jpeg.jpg";
 import usd from "../../assets/logo.png";
 import { useNavigate } from "react-router-dom";
-import { Wallet, Gift,  } from "lucide-react";
+import { Wallet, Gift, } from "lucide-react";
 import sol from "../../assets/sol.jpeg"
 import m from "../../assets/m.jpeg"
 import opensea from "../../assets/opensea.jpeg"
+import bambo from '../../assets/bambo.jpg'
 
 
 const Features = () => {
@@ -35,9 +36,18 @@ const Features = () => {
         transition={{ duration: 1 }}
         className="container mx-auto"
       >
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
-          Why Join The Bamboo Club?
-        </h2>
+
+<motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className=""
+          >
+        <div className="w-full mx-auto p-10">
+          <img src={bambo} className="md:w-6/12 w-full  mx-auto rounded-xl  border-[0.5px] border-[#181]" alt="#" />
+       </div>
+    
+       </motion.div>
 
         <div className="flex items-center  flex-col md:flex-row justify-center gap-8">
           {/* First Card */}
@@ -50,6 +60,7 @@ const Features = () => {
             <img src={shirt} alt="Bitcoin T-Shirt" className="h-[200px] rounded-lg" />
             <p className="text-gray-300">
               Anyone who mints 3 or more NFTs gets a <b>FREE Bitcoin T-Shirt!</b>
+              <p>More styles in the dressing room</p> 
             </p>
           </motion.div>
 
@@ -66,7 +77,7 @@ const Features = () => {
                 onClick={() => handleScrollToTop("/nft-drop")}
                 className="hover:text-purple-400 transition-colors text-center py-2 "
               >
-               NFT Mint Details
+                NFT Mint Details
               </button>
             </p>
           </motion.div>
@@ -137,11 +148,11 @@ const Features = () => {
       </div>
       <div className="flex pt-20  flex-col items-center justify-center gap-5">
 
-<div className="flex items-center  lg:flex-row gap-4 justify-center">
-  <img src={m} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
-  <img src={sol} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
-  <img src={opensea} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
-</div>
+        <div className="flex items-center  lg:flex-row gap-4 justify-center">
+          <img src={m} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
+          <img src={sol} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
+          <img src={opensea} alt="" className=" rounded-xl md:w-[300px] w-[100px] transition-all hover:scale-105 h-[100px] md:h-[200px] duration-300" />
+        </div>
       </div>
 
     </div>
