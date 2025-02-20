@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Twitter, MessageSquare, Instagram, Github } from 'lucide-react';
+import { Twitter, Instagram } from 'lucide-react';
 import LOGO from "../assets/logo.png"
 
 
@@ -43,18 +43,14 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="glass p-2 rounded-lg hover:bg-white/10 transition-colors">
+              <a href="https://x.com/coin_orca?s=21" className="glass p-2 rounded-lg hover:bg-white/10 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="glass p-2 rounded-lg hover:bg-white/10 transition-colors">
-                <MessageSquare className="h-5 w-5" />
-              </a>
-              <a href="#" className="glass p-2 rounded-lg hover:bg-white/10 transition-colors">
+
+              <a href="https://discord.gg/PQdgqdPW" className="glass p-2 rounded-lg hover:bg-white/10 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="glass p-2 rounded-lg hover:bg-white/10 transition-colors">
-                <Github className="h-5 w-5" />
-              </a>
+
             </div>
           </div>
         </div>

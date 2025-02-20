@@ -86,7 +86,6 @@
   will-change: transform;
 }
 
-
 .parallax-overlay {
   @apply fixed inset-0 -z-10;
   background: linear-gradient(
@@ -96,8 +95,6 @@
     rgba(67, 56, 202, 0.7)
   );
 }
-
-
 
 .animated-grid {
   @apply fixed inset-0 -z-10 opacity-20;
@@ -109,8 +106,6 @@
   background-size: 50px 50px;
   animation: gridMove 15s linear infinite;
 }
-
-
 
 .member-overlay {
   @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 transition-opacity duration-300;
@@ -145,3 +140,19 @@
   animation: floating 3s ease-in-out infinite;
 }
 
+.wallet-adapter-dropdown {
+  background: linear-gradient(
+    45deg,
+    rgb(147, 51, 234) 0%,
+    rgb(45, 212, 191) 100%
+  );
+  @apply relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25;
+}
+.wallet-adapter-button {
+  background: linear-gradient(
+    45deg,
+    rgb(147, 51, 234) 0%,
+    rgb(45, 212, 191) 100%
+  );
+  @apply relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25;
+}

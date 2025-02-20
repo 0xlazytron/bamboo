@@ -7,8 +7,23 @@ import GatedContent from './pages/GatedContent';
 import ClaimReward from './pages/ClaimReward';
 import MintPage from './pages/MintPage';
 import DressingRoom from './pages/DressingRoom';
+import { WalletProvider, ConnectionProvider } from '@solana/wallet-adapter-react';
+import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets';
+import { clusterApiUrl } from '@solana/web3.js';
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
+
+import('@solana/wallet-adapter-react-ui/styles.css');
+
 
 function App() {
+  const network = "devnet"; // Use "mainnet-beta" for mainnet
+  const endpoint = clusterApiUrl(network);
+
+  const wallets = [
+    new PhantomWalletAdapter(),
+    new SolflareWalletAdapter(),
+  ];
+
   return (
 
     <Router>
@@ -17,8 +32,13 @@ function App() {
         <div className="parallax-bg" />
         <div className="parallax-overlay" />
         <div className="animated-grid" />
-
-        <Navbar />
+        <ConnectionProvider endpoint={endpoint}>
+          <WalletProvider wallets={wallets} autoConnect>
+            <WalletModalProvider>
+              <Navbar />
+            </WalletModalProvider>
+          </WalletProvider>
+        </ConnectionProvider>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/nft-drop" element={<NFTDropPage />} />
@@ -30,6 +50,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+
   );
 }
 

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import RARE from "../../assets/gifs/rare.gif";
 import SURARE from "../../assets/gifs/surare.gif";
 import MYTHIC from "../../assets/gifs/mythic.gif";
@@ -52,7 +51,7 @@ const Hero = () => {
                 onClick={() => setSelectedCard(card)}
                 onHoverStart={() => setHoveredCard(index)}
                 onHoverEnd={() => setHoveredCard(null)}
-                className="absolute h-72 w-40 md:h-[500px] md:w-[245px] glass rounded-2xl overflow-hidden border-[10px] cursor-pointer shadow-xl"
+                className="absolute h-72 w-40 md:h-[440px] md:w-[320px] md:mt-20 glass rounded-2xl overflow-hidden border-[10px] cursor-pointer shadow-xl"
                 initial={{ x: `${(index - 1) * 60}px`, rotate: (index - 1) * 15 }}
                 animate={{ x: `${(index - 1) * 60}px`, rotate: (index - 1) * 15, scale: hoveredCard === index ? 1.1 : 1 }}
               >
