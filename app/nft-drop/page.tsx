@@ -33,7 +33,7 @@ const NFTDropPage = () => {
     setIsChecking(true);
     setTimeout(() => {
       setIsChecking(false);
-      router.push("/claim-reward"); // Use router.push for navigation
+      router.push("/claim"); // Use router.push for navigation
     }, 2000);
   };
 
