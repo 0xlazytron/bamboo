@@ -549,7 +549,7 @@ export function ButtonList({
       label: guard ? guard.label : "default",
       allowed: guard.allowed,
       header: text ? text.header : "",
-      //   mintText: text ? text.mintText : "mintText missing in settings.tsx",
+      // mintText: text ? text.mintText : "mintText missing in settings.tsx",
       buttonLabel: text
         ? text.buttonLabel
         : "Mint Now!",

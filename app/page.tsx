@@ -37,6 +37,7 @@ function page() {
                 <LandingPage />
 
                 <Modal isOpen={isShowNftOpen} onClose={onShowNftClose}>
+
                     <ModalOverlay />
                     <ModalContent className="bg-transparent">
                         <ModalBody>
