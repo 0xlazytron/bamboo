@@ -1,7 +1,0 @@
-{
-  "/nft-drop/page": "app/nft-drop/page.js",
-  "/gated-content/page": "app/gated-content/page.js",
-  "/mint/page": "app/mint/page.js",
-  "/dressing-room/page": "app/dressing-room/page.js",
-  "/claim/page": "app/claim/page.js"
-}
