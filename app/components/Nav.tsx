@@ -3,14 +3,16 @@ import Link from "next/link";
 import {
     Wallet,
     Twitter,
-    MessageSquare,
-    Instagram,
+    MessageCircle as Discord, // Alternative for Discord
+    Send as Telegram, // Alternative for Telegram
     Menu,
     X,
     Copy as CopyIcon,
     RefreshCw as ChangeWalletIcon,
     LogOut as DisconnectIcon,
 } from "lucide-react";
+import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
+
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -114,14 +116,14 @@ const Navbar = () => {
                             Dressing Room
                         </Link>
                         <div className="flex items-center space-x-4 mr-6">
-                            <a href="#" className="hover:text-purple-400 transition-colors text-white">
+                            <a href="https://x.com/coin_orca?s=21" className="hover:text-purple-400 transition-colors text-white">
                                 <Twitter className="h-5 w-5" />
                             </a>
-                            <a href="#" className="hover:text-purple-400 transition-colors text-white">
-                                <MessageSquare className="h-5 w-5" />
+                            <a href="https://discord.gg/jSgCy8sdUt" className="hover:text-purple-400 transition-colors text-white">
+                                <Discord className="h-5 w-5" />
                             </a>
-                            <a href="#" className="hover:text-purple-400 transition-colors text-white">
-                                <Instagram className="h-5 w-5" />
+                            <a href="https://discord.gg/jSgCy8sdUt" className="hover:text-purple-400 transition-colors text-white">
+                                <Telegram className="h-5 w-5" />
                             </a>
                         </div>
                         <div className="relative">
@@ -201,10 +203,10 @@ const Navbar = () => {
                                 <Twitter className="h-5 w-5" />
                             </a>
                             <a href="#" className="hover:text-purple-400 transition-colors text-white">
-                                <MessageSquare className="h-5 w-5" />
+                                <Discord className="h-5 w-5" />
                             </a>
                             <a href="#" className="hover:text-purple-400 transition-colors text-white">
-                                <Instagram className="h-5 w-5" />
+                                <Telegram className="h-5 w-5" />
                             </a>
                         </div>
                         <div className="relative text-white">
