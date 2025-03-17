@@ -228,3 +228,7 @@
   animation: gradientAnimation 3s linear infinite,
     glowingText 1.8s ease-in-out infinite alternate;
 }
+
+/* .chakra-stack button {
+  margin-bottom: 100px !important;
+} */

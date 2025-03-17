@@ -2,7 +2,7 @@
 // label has to be the exact same as in your candy machine config
 export const mintText = [
   {
-    label: "Public",
+    label: "public",
     mintText: "Public mintText",
     buttonLabel: "Mint now!",
     header: "Public Mint",

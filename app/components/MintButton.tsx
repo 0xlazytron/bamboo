@@ -629,7 +629,7 @@ export function ButtonList({
         <Tooltip label={buttonGuard.tooltip} aria-label="Mint button">
 
           <button
-            className="w-full bg-gradient-to-r from-yellow-300 to-yellow-500 py-3 rounded-xl font-bold text-black hover:from-yellow-400 hover:to-yellow-600 transition-all flex items-center justify-center text-lg shadow-lg hover:shadow-yellow-300/50 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full btn-gradient-primary px-4 py-2 rounded-lg flex items-center space-x-2 justify-center disabled:opacity-50 disabled:cursor-not-allowed mb-9 text-white"
             onClick={() =>
               mintClick(
                 umi,
@@ -657,7 +657,7 @@ export function ButtonList({
             ) : (
               // Initial state: Show Rocket icon
               <>
-                <Rocket className="w-5 h-5 mr-2" />
+                <Rocket className="w-5 h-5 mr-2 text-white" />
                 {buttonGuard.maxAmount > 1 ? buttonGuard.buttonLabel : "Can't mint"}
               </>
             )}

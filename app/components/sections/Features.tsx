@@ -58,7 +58,7 @@ const Features = () => {
             className="glass card-gradient flex items-center justify-center w-[90%] md:h-[390px] md:w-[260px] gap-2 flex-col p-6 rounded-xl text-center"
           >
             <Image
-              src="/assets/shirt.jpg"
+              src="/assets/shirt.png"
               alt="Bitcoin T-Shirt"
               width={200}
               height={200}
