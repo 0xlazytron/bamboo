@@ -43,7 +43,7 @@ export const allocationChecker = async (
   guard: {
     label: string;
     guards: GuardSet;
-}
+  }
 ) => {
   const allocation = guard.guards.allocation as Some<Allocation>;
 
@@ -108,7 +108,7 @@ export const mintLimitChecker = async (
   guard: {
     label: string;
     guards: GuardSet;
-}
+  }
 ) => {
   const mintLimit = guard.guards.mintLimit as Some<MintLimit>;
 
@@ -220,7 +220,7 @@ export const calculateMintable = (
   mintableAmount: number,
   newAmount: number
 ) => {
-  if (mintableAmount > newAmount){
+  if (mintableAmount > newAmount) {
     mintableAmount = newAmount;
   }
 
@@ -228,11 +228,11 @@ export const calculateMintable = (
   let maxmintamount = 0;
   try {
     maxmintamount = Number(process.env.NEXT_PUBLIC_MAXMINTAMOUNT)
-  } catch (e){
+  } catch (e) {
     console.error('process.env.NEXT_PUBLIC_MAXMINTAMOUNT is not a number!', e)
     return mintableAmount;
   }
-  if (mintableAmount > maxmintamount){
+  if (mintableAmount > maxmintamount) {
     mintableAmount = maxmintamount;
   }
 

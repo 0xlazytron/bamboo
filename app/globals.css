@@ -232,3 +232,20 @@
 /* .chakra-stack button {
   margin-bottom: 100px !important;
 } */
+
+.chakra-stack {
+  display: block !important;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.css-j7obnc {
+  display: block !important;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.css-12bse91 {
+  color: #fff !important;
+}
