@@ -129,7 +129,7 @@ const Features = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => router.push("/dressing-room")}
+          onClick={() => window.open("https://coinorca.io/clothing", "_blank")}
           className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
         >
           <Gift className="h-6 w-6" />

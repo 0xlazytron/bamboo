@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Twitter, Instagram } from 'lucide-react';
+import { Twitter, MessageCircle as Discord } from 'lucide-react';
 import LOGO from "../assets/logo.png"
 
 
@@ -24,7 +24,7 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link href="/nft-drop" className="text-gray-400 hover:text-white transition-colors">NFT Drop</Link></li>
-              <li><Link href="/dressing-room" className="text-gray-400 hover:text-white transition-colors">Dressing Room</Link></li>
+              <li><Link href="https://coinorca.io/clothing" target="_blank" className="text-gray-400 hover:text-white transition-colors">Dressing Room</Link></li>
               <li><Link href="/gated-content" className="text-gray-400 hover:text-white transition-colors">Exclusive Content</Link></li>
             </ul>
           </div>
@@ -43,14 +43,12 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4  text-white">Connect With Us</h3>
             <div className="flex space-x-4">
+              <a href="https://discord.gg/yX6c2tuPVU" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+                <Discord className="h-5 w-5" />
+              </a>
               <a href="https://x.com/coin_orca?s=21" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-
-              <a href="https://discord.gg/PQdgqdPW" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-
             </div>
           </div>
         </div>
