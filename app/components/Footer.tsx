@@ -43,10 +43,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4  text-white">Connect With Us</h3>
             <div className="flex space-x-4">
-              <a href="https://discord.gg/yX6c2tuPVU" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+              <a href="https://discord.gg/yX6c2tuPVU" target="__blank" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
                 <Discord className="h-5 w-5" />
               </a>
-              <a href="https://x.com/coin_orca?s=21" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+              <a href="https://x.com/coin_orca?s=21" target="__blank" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
