@@ -112,17 +112,17 @@ const Navbar = () => {
                         <Link href="/nft-drop" className="hover:text-purple-400 transition-colors text-white">
                             NFT Drop
                         </Link>
-                        <Link href="/dressing-room" className="hover:text-purple-400 transition-colors text-white">
+                        <Link href="https://coinorca.io/clothing" target="__blank" className="hover:text-purple-400 transition-colors text-white">
                             Dressing Room
                         </Link>
                         <div className="flex items-center space-x-4 mr-6">
-                            <a href="https://x.com/coin_orca?s=21" className="hover:text-purple-400 transition-colors text-white">
+                            <a href="https://x.com/coin_orca?s=21" target="__blank" className="hover:text-purple-400 transition-colors text-white">
                                 <Twitter className="h-5 w-5" />
                             </a>
-                            <a href="https://discord.gg/jSgCy8sdUt" className="hover:text-purple-400 transition-colors text-white">
+                            <a href="https://discord.gg/yX6c2tuPVU" target="__blank" className="hover:text-purple-400 transition-colors text-white">
                                 <Discord className="h-5 w-5" />
                             </a>
-                            <a href="https://discord.gg/jSgCy8sdUt" className="hover:text-purple-400 transition-colors text-white">
+                            <a href="https://discord.gg/jSgCy8sdUt" target="__blank" className="hover:text-purple-400 transition-colors text-white">
                                 <Telegram className="h-5 w-5" />
                             </a>
                         </div>
@@ -192,21 +192,21 @@ const Navbar = () => {
                             NFT Drop
                         </Link>
                         <Link
-                            href="/dressing-room"
+                            href="https://coinorca.io/clothing" target="__blank"
                             className="hover:text-purple-400 transition-colors py-2 text-white"
                             onClick={handleNavClick}
                         >
                             Dressing Room
                         </Link>
                         <div className="flex items-center space-x-4 py-2">
-                            <a href="#" className="hover:text-purple-400 transition-colors text-white">
+                            <a href="#" target="__blank" className="hover:text-purple-400 transition-colors text-white">
                                 <Twitter className="h-5 w-5" />
                             </a>
                             <a href="#" className="hover:text-purple-400 transition-colors text-white">
-                                <Discord className="h-5 w-5" />
+                                <Discord target="__blank" className="h-5 w-5" />
                             </a>
                             <a href="#" className="hover:text-purple-400 transition-colors text-white">
-                                <Telegram className="h-5 w-5" />
+                                <Telegram target="__blank" className="h-5 w-5" />
                             </a>
                         </div>
                         <div className="relative text-white">

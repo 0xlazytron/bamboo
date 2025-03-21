@@ -589,7 +589,7 @@ export function ButtonList({
             !buttonGuard.endTime && (
               <>
                 <Text fontSize="sm" marginRight={"2"}>
-                  Starting in:{" "}
+                  <span className="text-green">Starting in:</span>{" "}
                 </Text>
                 <Timer
                   toTime={buttonGuard.startTime}
