@@ -118,9 +118,9 @@ const Navbar = () => {
                             <a href="https://x.com/coin_orca?s=21" target="__blank" className="hover:text-purple-400 transition-colors text-white">
                                 <Twitter className="h-5 w-5" />
                             </a>
-                            <a href="https://discord.gg/yX6c2tuPVU" target="__blank" className="hover:text-purple-400 transition-colors text-white">
+                            {/* <a href="https://discord.gg/yX6c2tuPVU" target="__blank" className="hover:text-purple-400 transition-colors text-white">
                                 <Discord className="h-5 w-5" />
-                            </a>
+                            </a> */}
 
                         </div>
                         <div className="relative">

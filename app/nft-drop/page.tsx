@@ -146,7 +146,7 @@ const NFTDropPage = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => router.push("/gated-content")} // Use router.push for navigation
+            onClick={() => router.push("/holders")} // Use router.push for navigation
             className="px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white shadow-lg"
           >
             <Gift className="h-6 w-6" />

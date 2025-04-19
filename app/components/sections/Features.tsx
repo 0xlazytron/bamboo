@@ -3,9 +3,14 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation"; // Use Next.js router
 import { Wallet, Gift, Loader } from "lucide-react";
 import Image from "next/image";
+import { useWallet } from "@solana/wallet-adapter-react";
+import { useUmi } from "../../utils/useUmi";
+import { checkTShirtEligibility } from "../../services/eligibility";
 
 const Features = () => {
   const router = useRouter(); // Use Next.js router
+  const { connected, publicKey } = useWallet();
+  const umi = useUmi();
 
   const [isChecking, setIsChecking] = useState(false); // State for Claim T-Shirt button
 
@@ -14,12 +19,32 @@ const Features = () => {
     router.push(path); // Navigate using router.push
   };
 
-  const handleClaimTShirt = () => {
-    setIsChecking(true); // Simulate API call or eligibility check
-    setTimeout(() => {
+  const handleClaimTShirt = async () => {
+    if (!connected || !publicKey) {
+      // If wallet not connected, redirect to claim page which will
+      // prompt the user to connect their wallet
+      router.push("/claim");
+      return;
+    }
+    
+    setIsChecking(true); // Display loading state
+    
+    try {
+      // Check if the user is eligible for a t-shirt
+      const eligibilityResult = await checkTShirtEligibility(umi, umi.identity.publicKey);
+      
+      // Wait briefly to show the checking state
+      setTimeout(() => {
+        setIsChecking(false);
+        // Redirect to claim page, the eligibility will be re-checked there
+        router.push("/claim");
+      }, 1000);
+    } catch (error) {
+      console.error("Error checking eligibility:", error);
       setIsChecking(false);
-      router.push("/claim"); // Navigate using router.push
-    }, 2000); // Simulate a 2-second delay
+      // Still redirect to claim page, the eligibility will be checked there
+      router.push("/claim");
+    }
   };
 
   return (
@@ -140,11 +165,11 @@ const Features = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => router.push("/gated-content")}
+          onClick={() => router.push("/holders")}
           className="btn-gradient-secondary px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg"
         >
           <Gift className="h-6 w-6" />
-          <span>NFT HOLDERS ENTER</span>
+          <span>HOLDER BENEFITS</span>
         </motion.button>
       </div>
 

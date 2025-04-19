@@ -25,7 +25,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/nft-drop" className="text-gray-400 hover:text-white transition-colors">NFT Drop</Link></li>
               <li><Link href="https://coinorca.io/clothing" target="_blank" className="text-gray-400 hover:text-white transition-colors">Dressing Room</Link></li>
-              <li><Link href="/gated-content" className="text-gray-400 hover:text-white transition-colors">Exclusive Content</Link></li>
+              <li><Link href="/holders" className="text-gray-400 hover:text-white transition-colors">Holders Area</Link></li>
             </ul>
           </div>
 
@@ -43,9 +43,9 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4  text-white">Connect With Us</h3>
             <div className="flex space-x-4">
-              <a href="https://discord.gg/yX6c2tuPVU" target="__blank" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+              {/* <a href="https://discord.gg/yX6c2tuPVU" target="__blank" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
                 <Discord className="h-5 w-5" />
-              </a>
+              </a> */}
               <a href="https://x.com/coin_orca?s=21" target="__blank" className="glass p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
